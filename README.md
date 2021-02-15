@@ -1,6 +1,6 @@
 # My-matery
 
-[中文文档](README-CN.md) | [Access Example (Meteor's Blog)](https://qlad.gitee.io/)
+[中文文档](README_CN.md) | [Access Example (Meteor's Blog)](https://qlad.gitee.io/)
 
 > Thanks:
 > [zhangpanqin/my-hexo-theme-matery](https://github.com/zhangpanqin/my-hexo-theme-matery)
