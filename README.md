@@ -1,6 +1,6 @@
 # My-matery
 
-[🇺🇸English Document](README.md) | [Access Example (Meteor's Blog)](https://qlad.gitee.io/)
+[中文文档](README-CN.md) | [Access Example (Meteor's Blog)](https://qlad.gitee.io/)
 
 > Thanks:
 > [zhangpanqin/my-hexo-theme-matery](https://github.com/zhangpanqin/my-hexo-theme-matery)
@@ -483,54 +483,54 @@ music:
 
 
 
-## Article Introduction to Front-matter
+## Post Front-matter
 
-### Front-matter options in detail
+### Detailed Front-matter options
 
-All the content in the `Front-matter` option is **not required**. But I still recommend filling in at least the values ​​of `title` and `date`.
+Everything in the Front-matter option is **not required**. But I still recommend at least filling in the values of `title` and `date`.
 
-| Configuration options | Default value | Description |
-| ------------- | ------------------------------ | ---- -------------------------------------------------- ------ |
-| title | File title of `Markdown` | Article title, it is strongly recommended to fill in this option |
-| date | Date and time when the file was created | Release time, it is strongly recommended to fill in this option, and it is best to ensure that it is globally unique |
-| author | `author` in root `_config.yml` | Article author |
-| img | A value in `featureImages` | The article feature map, it is recommended to use the image bed (Tencent Cloud, Qiniu Cloud, Youpaiyun, etc.) to make the image path. For example: `http://xxx.com/ xxx.jpg` |
-| top | `true` | Recommended articles (whether the article is on the top), if the value of `top` is `true`, it will be the recommended article on the front page |
-| cover | `false` | New in `v1.0.2` version, indicating whether the article needs to be added to the cover of the homepage carousel |
-| coverImg | None | New in the `v1.0.2` version, which means the image path that the article needs to display on the cover of the carousel on the homepage. If not, the article’s featured image will be used by default |
-| password | None | Article reading password. If you want to set a reading verification password for the article, you can set the value of `password`, which must be a password encrypted with `SHA256` to prevent others from being seen through. The premise is that the `verifyPassword` option is activated in the theme's `config.yml` |
-| toc | `true` | Whether to enable TOC, the TOC function can be turned off separately for a certain article. The premise is that the `toc` option is activated in the theme's `config.yml` |
-| mathjax | `false` | Whether to enable math formula support, whether to enable `mathjax` in this article, and it needs to be enabled in the theme's `_config.yml` file |
-| summary | None | Article summary, customized article summary content, if this attribute has a value, the article card summary will display this text, otherwise the program will automatically intercept part of the article content as a summary |
-| categories | None | Article classification, the classification of this topic represents a large category in the macro, only one article is recommended for one category |
-| tags | None | Article tags, an article can have multiple tags |
-| keywords | Article title | Article keywords, required for SEO |
-| reprintPolicy | cc_by | Article reprinting rules, can be one of cc_by, cc_by_nd, cc_by_sa, cc_by_nc, cc_by_nc_nd, cc_by_nc_sa, cc0, noreprint or pay |
+| Options   | Defaults              | Description                                             |
+| ---------- | --------------------------- | ------------------------------------------------------------ |
+| title      | Markdown's file title | Post title, it is highly recommended to fill in this option |
+| date       | Date and time when the file created | Publish time, it is highly recommended to fill in this option, and it is best to ensure that it is globally unique |
+| author     | `author` in root `_config.yml` | Post author                                    |
+| img        | a value in `featureImages`  | Post feature image，For example: `http://xxx.com/xxx.jpg` |
+| top        | `true`                      | Recommended post (whether the post is topped), if the `top` value is `true`, it will be recommended as a homepage post. |
+| cover      | `false`                     | The `v1.0.2` version is added to indicate whether the post needs to be added to the homepage carousel cover. |
+| coverImg   | null                        | The new version of `v1.0.2` indicates that the post needs to display the image path on the cover of the homepage. If not, the default image of the post is used by default. |
+| password   | null                        | The post read the password. If you want to set the reading verification password for the article, you can set the value of `password`, which must be encrypted with `SHA256` to prevent others from seeing it. The premise is that the `verifyPassword` option is activated in the theme's `config.yml` |
+| toc        | `true`                      | Whether TOC is turned on or not, you can turn off the TOC function for an article. The premise is that the `toc` option is activated in the theme's `config.yml` |
+| mathjax    | `false`                     | Whether to enable math formula support, whether this article starts `mathjax`, and you need to open it in the theme `_config.yml` file. |
+| summary    | null                        | Post summary, custom post summary content, if the attribute has a value, the post card summary will display the text, otherwise the program will automatically intercept part of the article as a summary |
+| categories | null                        | Article classification, the classification of this topic represents a macroscopically large classification, only one article is recommended for one classification. |
+| tags       | null                        | Post label, a post can have multiple labels |
+| keywords   | Post Title                  | Post key Words With SEO                               |
+| reprintPolicy       | cc_by              | Post reprint policy, value could be one of cc_by, cc_by_nd, cc_by_sa, cc_by_nc, cc_by_nc_nd, cc_by_nc_sa, cc0, noreprint and pay |
 
-> **Note**:
-> 1. If the `img` attribute is not filled in, the feature image of the article will be based on the value of the `hashcode` of the article title, and then select the corresponding feature image in the theme, so that all the feature images of the article** have their own characteristics **.
-> 2. The value of `date` try to ensure that each article is unique, because in this topic, `Gitalk` and `Gitment` identify `id` through the value of `date` as the unique identification.
-> 3. If you want to set the reading verification password function for the article, you must not only set the password value using SHA256 encryption in Front-matter, but also activate the configuration in the theme's `_config.yml`. Some online SHA256 encrypted addresses are available for you to use: [Open Source China Online Tools](http://tool.oschina.net/encrypt?type=2), [chahuo](http://encode.chahuo.com /), [Webmaster Tools](http://tool.chinaz.com/tools/hash.aspx).
-> 4. You can specify reprintPolicy in the front-matter of the article md file to configure reprinting rules for a single article
+> **Note**: 
+> 1. post's featured picture will take remainder if not writing the `img` property, and choose the featured picture of theme to let all of post's picture **have their own characteristics**.
+> 2. The value of `date` should try to ensure that each article is unique, because `Gitalk` and `Gitment` recognize `id` in this topic are uniquely identified by the value of `date`.
+> 3. If you want to set the ability to read the verification password for the article, you should not only set the value of the password with SHA256 encryption in Front-matter, but also activate the configuration in the theme `_config.yml`.
+> 4. you can define reprint policy for a single article in the front-matter of the specific md file using this key: reprintPolicy
 
-The following is an example of `Front-matter` of the article.
+The following are examples of the post's `Front-matter`.
 
-### Simplest example
+### The simplest example
 
 ```yaml
 ---
-title: typora-vue-theme theme introduction
+title: typora-vue-theme Theme introduction
 date: 2018-09-07 09:25:00
 ---
 ```
 
-### The most complete example
+### The most comprehensive example
 
 ```yaml
 ---
-title: typora-vue-theme theme introduction
+title: typora-vue-theme Theme introduction
 date: 2018-09-07 09:25:00
-author: Zhao Qi
+author: Qi Zhao
 img: /source/images/xxx.jpg
 top: true
 cover: true
@@ -538,14 +538,13 @@ coverImg: /images/1.jpg
 password: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92
 toc: false
 mathjax: false
-summary: This is your customized article summary content. If this attribute has a value, the article card summary will display this text, otherwise the program will automatically intercept part of the article content as a summary
+summary: This is the content of your custom post summary. If there is a value for this attribute, the post card summary will display the text, otherwise the program will automatically intercept part of the post content as a summary.
 categories: Markdown
 tags:
-  -Typora
-  -Markdown
+  - Typora
+  - Markdown
 ---
 ```
-
 ## Effect screenshot
 
 ![Home](https://www.hualigs.cn/image/602aa3f8be851.jpg)
